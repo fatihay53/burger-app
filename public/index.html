@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burger Servis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
+
 <body>
 
 
-    
-    
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div id="unteatenList">
+
+
+                </div>
+            </div>
+            <div class="col-6">
+                <div id="eatenList"></div>
+
+            </div>
+
+            <div class="row" style="text-align: center;">
+                <form action="/api/burger/add" method="POST">
+                    <textarea id="burger_name" type="text" name="burger_name" class="form-control"></textarea>
+                    <h5 style="color: white;">Enter a button you want to eat Click the "Submit" button</h5>
+                    <button class="btn btn-primary btn-lg" style="margin-top: 2%;">Submit</button>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+<script src="./script.js"></script>
 </body>
+
 </html>
