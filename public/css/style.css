@@ -1,0 +1,21 @@
+
+
+#burger_name{
+    max-width: 250px;
+    align-items: center;
+    margin-left: 40%;
+}
+#eatenBrgr:hover{
+    background-color: orange;
+
+}
+#unEatenBrgr:hover{
+    background-color: red;
+}
+
+
+body{
+    background-image: url('../img/wallpaper.jpg' );
+    background-size: cover;
+    background-repeat: no-repeat;
+}

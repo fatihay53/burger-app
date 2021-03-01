@@ -5,12 +5,9 @@ async function getBurger (){
     return db.query("SELECT * FROM burgers where devoured=0")
 }
 
-
-
-
 function insertBurger( burger ){
     return db.query( `INSERT INTO burgers (burger_name,devoured) VALUES(?,?)`, 
-        ["burger",false] )
+        [burger.burger_name,false] )
 }
 
 
@@ -18,7 +15,13 @@ function deleteBurger( id ){
     return db.query( `DELETE FROM burgers WHERE id='${id}'`)
 
 }
-// function updateQuote (id){
-//     return db.query(`update quotes where id = '${id}'`)
-// }
-module.exports = { getBurger,insertBurger,deleteBurger}
+function updateBurger(id){
+    return db.query(`Update burgers set devoured=1 where id = ${id}`)
+}
+function eatenBurger(){
+    return db.query("SELECT * FROM burgers where devoured=1")
+}
+
+
+
+module.exports = { getBurger,insertBurger,deleteBurger,updateBurger,eatenBurger}

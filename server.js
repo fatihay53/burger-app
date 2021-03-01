@@ -25,19 +25,27 @@ app.post( "/api/burger/add", async function( req, res ){
     const burger = req.body
     console.log(burger)
     const result = await orm.insertBurger( burger )
-
-    
-
     res.redirect( '/index.html' )
 })
 
-app.delete( '/api/:id', async function( req, res ){
+app.delete( `/api/burger/:id`, async function( req, res ){
     const id = req.params.id
     console.log(id)
 
     const result = await orm.deleteBurger( id )
 
     res.send( { message: `Deleted ${id}` } )
+})
+app.post( '/api/burger/:id', async function (req,res){
+    const id = req.params.id
+    const result = await orm.updateBurger( id )
+   
+    res.redirect( '/index.html' )
+} )
+
+app.get ('/api/eaten', async function (req,res){
+    const eatenburgerList = await orm.eatenBurger()
+    res.send(eatenburgerList)
 })
 
 
