@@ -10,6 +10,10 @@ In this assignment, you'll create a burger logger with MySQL, Node, Express, Han
 ![GitHub Logo](./public/img/screenshot.jpg)
 
 
+## Links 
+
+Heroku: https://burger-eat-application.herokuapp.com/index.html
+GitHub: https://github.com/fatihay53/burger-app
 ### Read This
 
 When trying to connect remotely to your Heroku database on an open network such as a coffee shop, library, or even your University WiFi, it will be blocked. If you are experiencing a Heroku connection error, this could be why.
